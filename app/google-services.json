@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "935442313538",
+    "project_id": "sgtracker-b466e",
+    "storage_bucket": "sgtracker-b466e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935442313538:android:725649087ee651a852d8db",
+        "android_client_info": {
+          "package_name": "com.example.sgtracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935442313538-kh0ljtqgudogrhvmrd30cql31mtskcjl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmuo9-5vs4o2mErGMp_qmb7x288Td8VJ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935442313538-kh0ljtqgudogrhvmrd30cql31mtskcjl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

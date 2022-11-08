@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SGTracker</string>
+    <string name="btn_IniciarSesionP">Iniciar Sesion</string>
+    <string name="btn_RegistrarseP">Registrarse</string>
+    <string name="btn_IniciarSesion">Iniciar Sesion</string>
+    <string name="btn_newSala">Crear Nueva Sala de Trabajo</string>
+    <string name="btn_joinSala">Unirse a Sala de Trabajo</string>
+</resources>
