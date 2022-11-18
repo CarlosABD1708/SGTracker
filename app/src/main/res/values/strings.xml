@@ -5,4 +5,9 @@
     <string name="btn_IniciarSesion">Iniciar Sesion</string>
     <string name="btn_newSala">Crear Nueva Sala de Trabajo</string>
     <string name="btn_joinSala">Unirse a Sala de Trabajo</string>
+    <string name="correo_electronico">Correo Electronico</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="confirmar_contrase_a">Confirmar Contraseña</string>
+    <string name="nombres">Nombres</string>
+    <string name="apellidos">Apellidos</string>
 </resources>
