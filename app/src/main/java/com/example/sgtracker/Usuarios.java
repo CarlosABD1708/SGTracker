@@ -19,7 +19,7 @@ public class Usuarios {
         this.id_usuario = id_usuario;
         this.correoUsuario = correoUsuario;
         this.nombreUsuario = nombreUsuario;
-        this.rolUsuario = "Unknown";
+        this.rolUsuario = "none";
         this.id_clase = "none";
         this.id_ruta = "none";
         this.latitud = "none";

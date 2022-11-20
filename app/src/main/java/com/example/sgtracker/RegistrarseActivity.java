@@ -44,14 +44,10 @@ public class RegistrarseActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-
-        //updateUI(currentUser);
     }
 
     public void registrar_usuario(View view){
-        //WDatabaseReference mDatabase = database.getReference("https://console.firebase.google.com/project/sgtracker-b466e/database/sgtracker-b466e-default-rtdb/data/~2F?hl=es");
         if (pass.getText().toString().equals(passconf.getText().toString())){
             mAuth.createUserWithEmailAndPassword(correo.getText().toString(), pass.getText().toString())
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -64,7 +60,7 @@ public class RegistrarseActivity extends AppCompatActivity {
                                 mDatabase.child(mAuth.getUid().toString()).setValue(usuario);
                                 Toast.makeText(getApplicationContext(), "Usuario Creado",Toast.LENGTH_SHORT).show();
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                Intent i = new Intent(getApplicationContext(),inicioActivity.class);
+                                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                                 startActivity(i);
                             } else {
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
@@ -76,9 +72,6 @@ public class RegistrarseActivity extends AppCompatActivity {
         else{
             Toast.makeText(this,"Las Contraseñas No Coinciden",Toast.LENGTH_SHORT).show();
         }
-
-
-
     }
 
 }

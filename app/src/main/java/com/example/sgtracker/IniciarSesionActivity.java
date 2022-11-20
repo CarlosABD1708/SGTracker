@@ -3,7 +3,9 @@ package com.example.sgtracker;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -19,8 +21,6 @@ public class IniciarSesionActivity extends AppCompatActivity {
     private EditText correo;
     private EditText pass;
     private FirebaseAuth mAuth;
-// ...
-// Initialize Firebase Auth
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,9 +34,7 @@ public class IniciarSesionActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        //updateUI(currentUser);
+         FirebaseUser currentUser = mAuth.getCurrentUser();
     }
 
     public void Iniciar_Sesion(View view){
@@ -45,20 +43,24 @@ public class IniciarSesionActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(getApplicationContext(), "Has Iniciado Sesion",Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Intent i = new Intent(getApplicationContext(),inicioActivity.class);
+                            SetInicioValue();
+                            Intent i = new Intent(getApplicationContext(),CrearSalaActivity.class);
                             startActivity(i);
 
                         } else {
-                            // If sign in fails, display a message to the user.
-                            //Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(getApplicationContext(), "Fallo Al Iniciar Sesion.",
                                     Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
                         }
                     }
                 });
+    }
+
+    private void SetInicioValue() {
+        SharedPreferences preferences = getSharedPreferences("InicioSesion", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("sesion",true);
+        editor.commit();
     }
 }

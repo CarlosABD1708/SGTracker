@@ -11,7 +11,6 @@ public class Rutas {
 
     }
     public Rutas(String id_ruta,List<String> nodosRuta){
-
         this.id_ruta = id_ruta;
         this.nodosRuta = nodosRuta;
     }
