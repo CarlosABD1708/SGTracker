@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Clase_GUI_Prueba">
+    tools:context=".MapsActivityPrueba">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="230dp"
-        android:layout_height="135dp"
-        android:height="@android:dimen/app_icon_size"
-        android:gravity="center"
-        android:text="Hola Mundo"
-        android:textAlignment="center"
-        android:textSize="34sp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="413dp"
+        android:layout_height="732dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MapsActivity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

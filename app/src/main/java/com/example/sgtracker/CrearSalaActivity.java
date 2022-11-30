@@ -44,7 +44,7 @@ public class CrearSalaActivity extends AppCompatActivity {
                 mDatabase.child(mAuth.getCurrentUser().getUid()).child("rolUsuario").setValue("ADMIN");
                 setSalaValue();
                 Toast.makeText(CrearSalaActivity.this, "Sala De Trabajo Creada", Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(getApplicationContext(),Clase_GUI_Prueba.class);
+                Intent i = new Intent(getApplicationContext(), MapsActivity.class);
                 startActivity(i);
             }
 

@@ -10,4 +10,12 @@
     <string name="confirmar_contrase_a">Confirmar Contraseña</string>
     <string name="nombres">Nombres</string>
     <string name="apellidos">Apellidos</string>
+    <string name="title_activity_maps_prueba">MapsActivityPrueba</string>
+    <string name="permission_required_toast">Permisos Requeridos</string>
+    <string name="permission_rationale_location">Permisos De Ubicacion Requeridos</string>
+    <string name="location_permission_denied">Permisos De Localizacion Denegados</string>
+    <string name="hola_mundo">Hola Mundo</string>
+    <string name="agregar_nodo">Agregar Nodo</string>
+    <string name="agregar_ruta">Agregar Ruta</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

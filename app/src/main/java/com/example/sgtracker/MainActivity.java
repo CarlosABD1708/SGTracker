@@ -8,14 +8,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-import java.lang.Thread;
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private SharedPreferences sesion,sala;
@@ -35,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         if(sesion_value == true) {
             Intent i;
             if(sala_value == true){
-                i = new Intent(this, Clase_GUI_Prueba.class);
+                i = new Intent(this, MapsActivity.class);
             }else{
                 i = new Intent(this, CrearSalaActivity.class);
             }
